@@ -21,7 +21,7 @@ function moveOut() {
             document.getElementById("optionTwo").style.left = (Width - 150) + "px";
             document.getElementById("menu").style.width = Width + "px";
             format();
-            Width++;
+            Width+=2;
             if (Width != 200) {
                 setTimeout(moveOut, 1);
             }
@@ -33,7 +33,7 @@ function moveOut() {
             document.getElementById("optionTwo").style.left = (Width - 150) + "px";
             document.getElementById("menu").style.width = Width + "px";
             format();
-            Width--;
+            Width-=2;
             if (Width != 0) {
                 setTimeout(moveOut, 1);
             }
