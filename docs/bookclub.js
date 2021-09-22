@@ -28,13 +28,13 @@ function moveOut() {
 
         }
     } else {
-        if (Width > 0) {
+        if (Width >= 0) {
+            Width-=2;
             document.getElementById("optionOne").style.left = (Width - 150) + "px";
             document.getElementById("optionTwo").style.left = (Width - 150) + "px";
             document.getElementById("menu").style.width = Width + "px";
             format();
-            Width-=2;
-            if (Width != 0) {
+            if (Width > 0) {
                 setTimeout(moveOut, 1);
             }
 

@@ -24,7 +24,7 @@ h1 {
 }
 #menu {
     width: 0px;
-    background-color: aqua;
+    background-color: grey;
 }
 #mainPage {
     display: flex;
@@ -41,6 +41,19 @@ h1 {
     position: absolute;
 }
 #form {
-    width: 1000px;
-    height: 1000px;
+    width: 640px;
+    height: 436;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+#description {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+#centerDesc {
+
 }
