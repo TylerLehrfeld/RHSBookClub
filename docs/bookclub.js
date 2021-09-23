@@ -2,6 +2,7 @@ var Width = 0;
 var out = false;
 
 document.getElementById("box").addEventListener("click", moveOut)
+window.addEventListener("load", format);
 window.addEventListener("resize", format);
 function moveOut() {
     document.getElementById("body").style.pointerEvents = "none";
@@ -53,5 +54,5 @@ function moveOut() {
 }
 
 function format() {
-    document.getElementById("description").style.width = window.innerWidth - Width + "px";
+    document.getElementById("description").style.width = window.innerWidth - 200 + "px";
 }

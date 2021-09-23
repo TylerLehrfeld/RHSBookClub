@@ -29,6 +29,7 @@ h1 {
 #mainPage {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     height: 500px;
     width: 100%;
 }
@@ -53,7 +54,12 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
+    align-items: center;
+    
 }
 #centerDesc {
 
+}
+h3 {
+    padding-right: 200px;
 }
