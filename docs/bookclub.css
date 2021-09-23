@@ -71,6 +71,8 @@ p {
     text-align: center;
 }
 #footer {
-    height: 10%;
+    position: absolute;
+    height: 100px;
+    width: 100%;
     background-color: gray;
 }

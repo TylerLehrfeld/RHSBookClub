@@ -55,4 +55,5 @@ function moveOut() {
 
 function format() {
     document.getElementById("description").style.width = window.innerWidth - 220 + "px";
+    document.getElementById("footer").style.top = window.innerHeight+"px";
 }
