@@ -54,5 +54,5 @@ function moveOut() {
 }
 
 function format() {
-    document.getElementById("description").style.width = window.innerWidth - 200 + "px";
+    document.getElementById("description").style.width = window.innerWidth - 220 + "px";
 }
