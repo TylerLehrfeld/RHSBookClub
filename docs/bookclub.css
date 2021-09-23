@@ -31,7 +31,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 70%;
+   
     width: 100%;
 }
 #optionOne {
@@ -45,6 +45,8 @@ h1 {
 #form {
     width: 640px;
     height: 436;
+    padding-right: 100px;
+    
 }
 body {
     margin: 0px;
@@ -58,8 +60,16 @@ body {
     align-items: center;
     
 }
+#descriptionCont {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+}
 #centerDesc {
-
+    width: 100%;
+    margin-right: 200px;
 }
 h3 {
     padding-right: 200px;
