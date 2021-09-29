@@ -57,17 +57,31 @@ h1 {
     width: 100%;
 }
 #optionOne {
-    
     position: relative;
     top: 75px;
     left: 50px;
+    width: 8em;
+    text-align: center;
 
 }
 #optionTwo {
     top: 100px;
     left: 50px;
-   
+    width: 8em;
+    text-align: center;
     position: relative;
+}
+#join {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8%;
+}
+.links {
+    background-color: blue;
+    border-radius: 5px;
+}
+.links:hover {
+    background-color: green;
 }
 .maintext {
     margin-left: 2em;

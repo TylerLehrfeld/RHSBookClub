@@ -56,7 +56,7 @@ function moveOut() {
 function format() {
     //document.getElementById("description").style.width = window.innerWidth - 220 + "px";
     //document.getElementById("mainPage").style.height = window.innerHeight - document.getElementById("header").style.height +"px";
-    if(window.location.href=="https://www.reservoirbookclub.xyz/Calendar.html"||window.location.href=="file:///C:/Users/14107/BookClub/docs/Calendar.html") {
+    if(window.location.href=="https://www.reservoirbookclub.xyz/Calendar.html"||window.location.href=="file:///C:/Users/14107/bookclub/docs/Calendar.html") {
         document.getElementById("form2").style.marginLeft = (window.innerWidth-800)/2+"px";
     } else {
         document.getElementById("form").style.marginLeft = (window.innerWidth-640)/2+"px";
