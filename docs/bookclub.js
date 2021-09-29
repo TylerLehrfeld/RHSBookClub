@@ -12,10 +12,10 @@ function moveOut() {
         if (Width == 0) {
             document.getElementById("optionOne").style.display = "relative";
             document.getElementById("optionTwo").style.display = "relative";
-            document.getElementById("optionOne").style.left = "50px";
-            document.getElementById("optionTwo").style.left = "50px";
-            document.getElementById("optionOne").style.top = "100px";
-            document.getElementById("optionTwo").style.top = "150px";
+            document.getElementById("optionOne").style.left = "25px";
+            document.getElementById("optionTwo").style.left = "25px";
+            document.getElementById("optionOne").style.top = "25px";
+            document.getElementById("optionTwo").style.top = "50px";
         }
         if (Width < 200) {
             /*document.getElementById("optionOne").style.left = (Width - 150) + "px";
