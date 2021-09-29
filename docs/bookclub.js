@@ -10,19 +10,19 @@ function moveOut() {
 
 
         if (Width == 0) {
-            document.getElementById("optionOne").style.display = "block";
-            document.getElementById("optionTwo").style.display = "block";
-            document.getElementById("optionOne").style.left = "-150px";
-            document.getElementById("optionTwo").style.left = "-150px";
+            document.getElementById("optionOne").style.display = "relative";
+            document.getElementById("optionTwo").style.display = "relative";
+            document.getElementById("optionOne").style.left = "50px";
+            document.getElementById("optionTwo").style.left = "50px";
             document.getElementById("optionOne").style.top = "100px";
             document.getElementById("optionTwo").style.top = "150px";
         }
         if (Width < 200) {
-            document.getElementById("optionOne").style.left = (Width - 150) + "px";
-            document.getElementById("optionTwo").style.left = (Width - 150) + "px";
-            document.getElementById("menu").style.width = Width + "px";
+            /*document.getElementById("optionOne").style.left = (Width - 150) + "px";
+            document.getElementById("optionTwo").style.left = (Width - 150) + "px";*/
+            document.getElementById("menu").style.left = Width-200+"px";
             format();
-            Width+=2;
+            Width+=4;
             if (Width != 200) {
                 setTimeout(moveOut, 1);
             }
@@ -30,10 +30,10 @@ function moveOut() {
         }
     } else {
         if (Width >= 0) {
-            Width-=2;
-            document.getElementById("optionOne").style.left = (Width - 150) + "px";
-            document.getElementById("optionTwo").style.left = (Width - 150) + "px";
-            document.getElementById("menu").style.width = Width + "px";
+            Width-=4;
+            /*document.getElementById("optionOne").style.left = (Width - 150) + "px";
+            document.getElementById("optionTwo").style.left = (Width - 150) + "px";*/
+            document.getElementById("menu").style.left = Width-200 + "px";
             format();
             if (Width > 0) {
                 setTimeout(moveOut, 1);
@@ -54,7 +54,12 @@ function moveOut() {
 }
 
 function format() {
-    document.getElementById("description").style.width = window.innerWidth - 220 + "px";
-    document.getElementById("mainPage").style.height = window.innerHeight - document.getElementById("header").style.height +"px";
+    //document.getElementById("description").style.width = window.innerWidth - 220 + "px";
+    //document.getElementById("mainPage").style.height = window.innerHeight - document.getElementById("header").style.height +"px";
+    if(window.location.href=="https://www.reservoirbookclub.xyz/Calendar.html") {
+        document.getElementById("form2").style.marginLeft = (window.innerWidth-800)/2+"px";
+    } else {
+        document.getElementById("form").style.marginLeft = (window.innerWidth-640)/2+"px";
+    }
     
 }
