@@ -5,6 +5,7 @@ var Opacity = 0;
 
 document.getElementById("box").addEventListener("click", moveOut);
 document.getElementById("buttonprotector").addEventListener("click", moveOut);
+document.getElementById("shield").addEventListener("click", moveOut);
 window.addEventListener("load", format);
 window.addEventListener("resize", format);
 function moveOut() {
@@ -14,7 +15,7 @@ function moveOut() {
 
         if (Width == 0) {
             document.getElementById("shield").style.width = "100%";
-            document.getElementById("shield").style.height = "100%";
+            document.getElementById("shield").style.height = "1400px";
             document.getElementById("optionOne").style.display = "relative";
             document.getElementById("optionTwo").style.display = "relative";
             document.getElementById("optionOne").style.left = "25px";
@@ -59,6 +60,8 @@ function moveOut() {
             Width = 0;
             Radius = 0;
             Opacity = 0;
+            
+
         }
     }
     if (Width == 200) {
@@ -67,6 +70,8 @@ function moveOut() {
     } else if (Width == 0) {
         document.getElementById("body").style.pointerEvents = "auto";
         out = false;
+        document.getElementById("shield").style.width = "0px";
+    document.getElementById("shield").style.height = "0px";
     }
 }
 
