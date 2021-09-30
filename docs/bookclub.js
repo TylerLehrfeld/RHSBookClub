@@ -1,4 +1,5 @@
 var Width = 0;
+var Radius = 10;
 var out = false;
 
 document.getElementById("box").addEventListener("click", moveOut)
@@ -21,8 +22,10 @@ function moveOut() {
             /*document.getElementById("optionOne").style.left = (Width - 150) + "px";
             document.getElementById("optionTwo").style.left = (Width - 150) + "px";*/
             document.getElementById("menu").style.left = Width-200+"px";
+            document.getElementById("header").style.borderBottomLeftRadius = Radius+"px";
             format();
             Width+=4;
+            Radius--;
             if (Width != 200) {
                 setTimeout(moveOut, 1);
             }
@@ -31,9 +34,12 @@ function moveOut() {
     } else {
         if (Width >= 0) {
             Width-=4;
+            
+                Radius++;
             /*document.getElementById("optionOne").style.left = (Width - 150) + "px";
             document.getElementById("optionTwo").style.left = (Width - 150) + "px";*/
             document.getElementById("menu").style.left = Width-200 + "px";
+            document.getElementById("header").style.borderBottomLeftRadius = Radius+"px";
             format();
             if (Width > 0) {
                 setTimeout(moveOut, 1);
@@ -41,7 +47,7 @@ function moveOut() {
 
         } else {
             Width = 0;
-
+            Radius = 0;
         }
     }
     if (Width == 200) {
