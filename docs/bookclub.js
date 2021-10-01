@@ -2,6 +2,7 @@ var Width = 0;
 var Radius = 10;
 var out = false;
 var Opacity = 0;
+var Height = 1400;
 
 document.getElementById("box").addEventListener("click", moveOut);
 document.getElementById("buttonprotector").addEventListener("click", moveOut);
@@ -15,7 +16,7 @@ function moveOut() {
 
         if (Width == 0) {
             document.getElementById("shield").style.width = "100%";
-            document.getElementById("shield").style.height = "1400px";
+            document.getElementById("shield").style.height = Height+"px";
             document.getElementById("optionOne").style.display = "relative";
             document.getElementById("optionTwo").style.display = "relative";
             document.getElementById("optionOne").style.left = "25px";
@@ -76,6 +77,8 @@ function moveOut() {
 }
 
 function format() {
+    Height = window.innerHeight > 1400 ? window.innerHeight:1400;
+    document.getElementById("menu").style.height = Height+"px";
     document.getElementById("buttonprotector").style.position = "absolute";
     document.getElementById("buttonprotector").style.width = "40px";
     document.getElementById("buttonprotector").style.height = "40px";
