@@ -1,95 +1,59 @@
-var Width = 0;
-var Radius = 10;
-var out = false;
-var Opacity = 0;
-var Height = 1400;
-
-document.getElementById("box").addEventListener("click", moveOut);
-document.getElementById("buttonprotector").addEventListener("click", moveOut);
-document.getElementById("shield").addEventListener("click", moveOut);
-window.addEventListener("load", format);
-window.addEventListener("resize", format);
-function moveOut() {
-    document.getElementById("body").style.pointerEvents = "none";
-    if (!(out)) {
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu');
+const navLogo = document.querySelector('#navbar__logo');
 
 
-        if (Width == 0) {
-            document.getElementById("shield").style.width = "100%";
-            document.getElementById("shield").style.height = Height+"px";
-            document.getElementById("optionOne").style.display = "relative";
-            document.getElementById("optionTwo").style.display = "relative";
-            document.getElementById("optionOne").style.left = "25px";
-            document.getElementById("optionTwo").style.left = "25px";
-            document.getElementById("optionOne").style.top = "25px";
-            document.getElementById("optionTwo").style.top = "50px";
-        }
-        if (Width < 200) {
-            /*document.getElementById("optionOne").style.left = (Width - 150) + "px";
-            document.getElementById("optionTwo").style.left = (Width - 150) + "px";*/
-            document.getElementById("menu").style.left = Width-200+"px";
-            document.getElementById("header").style.borderBottomLeftRadius = Radius+"px";
-            document.getElementById("shield").style.opacity= Opacity+"%";
-            format();
-            Width+=4;
-            Radius--;
-            Opacity++;
-            
-            if (Width != 200) {
-                setTimeout(moveOut, 1);
-            }
+// Display Mobile Menu
+const mobileMenu = () => {
+  menu.classList.toggle('is-active');
+  menuLinks.classList.toggle('active');
+};
 
-        }
-    } else {
-        if (Width >= 0) {
-            Width-=4;
-            
-                Radius++;
-                Opacity--;
-            /*document.getElementById("optionOne").style.left = (Width - 150) + "px";
-            document.getElementById("optionTwo").style.left = (Width - 150) + "px";*/
-            document.getElementById("menu").style.left = Width-200 + "px";
-            document.getElementById("header").style.borderBottomLeftRadius = Radius+"px";
-            document.getElementById("shield").style.opacity= Opacity+"%";
-            
-            format();
-            if (Width > 0) {
-                setTimeout(moveOut, 1);
-            }
+menu.addEventListener('click', mobileMenu);
 
-        } else {
-            Width = 0;
-            Radius = 0;
-            Opacity = 0;
-            
+// show active menu 
+const highlightMenu = () => {
+  const elem = document.querySelector('.highlight');
+  const home = document.querySelector('#home-page');
+  const cbook = document.querySelector('#about-page');
+  const archive = document.querySelector('#archive-page');
+  const signUp = document.querySelector('#signUp-page');
+  let scrollPos = window.scrollY;
+  
+  //highlights
+  if(window.innerWidth > 960 && scrollPos < 600) {
+    home.classList.add('highlight');
+    cbook.classList.remove('highlight');
+    return;
+  } else if (window.innerWidth > 960 && scrollPos < 1400) {
+    cbook.classList.add('highlight');
+    home.classList.remove('highlight');
+    archive.classList.remove('highlight');
+    return;
+  } else if (window.innerWidth > 1400 && scrollPos < 2345) {
+    cbook.classList.remove('highlight');
+    archive.classList.add('highlight');
+    return;
+  }
 
-        }
-    }
-    if (Width == 200) {
-        document.getElementById("body").style.pointerEvents = "auto";
-        out = true;
-    } else if (Width == 0) {
-        document.getElementById("body").style.pointerEvents = "auto";
-        out = false;
-        document.getElementById("shield").style.width = "0px";
-    document.getElementById("shield").style.height = "0px";
-    }
+  if((elem && window.innerWidth < 960 && scrollPos < 600) || elem){
+    elem.classList.remove('highlight');
+  }
+};
+
+window.addEventListener('scroll', 'highlightMenu');
+window.addEventListener('click', 'highlightMenu');
+
+//close mobile
+
+const hideMobileMenu = () => {
+  const menuBars = document.querySelector('.is-active')
+  if(window.innerWidth <= 968 && menuBars) {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.remove('active');
+
+  }
 }
 
-function format() {
-    Height = window.innerHeight > 1400 ? window.innerHeight:1400;
-    document.getElementById("menu").style.height = Height+"px";
-    document.getElementById("buttonprotector").style.position = "absolute";
-    document.getElementById("buttonprotector").style.width = "40px";
-    document.getElementById("buttonprotector").style.height = "40px";
-    document.getElementById("buttonprotector").style.top = "8px";
-    document.getElementById("buttonprotector").style.left = "8px";
-    //document.getElementById("description").style.width = window.innerWidth - 220 + "px";
-    //document.getElementById("mainPage").style.height = window.innerHeight - document.getElementById("header").style.height +"px";
-    if(window.location.href=="https://www.reservoirbookclub.xyz/Calendar.html"||window.location.href=="file:///C:/Users/14107/bookclub/docs/Calendar.html") {
-        document.getElementById("form2").style.marginLeft = (window.innerWidth-800)/2+"px";
-    } else {
-        document.getElementById("form").style.marginLeft = (window.innerWidth-640)/2+"px";
-    }
-    
-}
+menuLinks.addEventListener('click', hideMobileMenu);
+navLogo.addEventListener('click', hideMobileMenu);
