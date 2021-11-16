@@ -1,92 +1,130 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Book Club</title>
-    <script src="bookclub.js" defer></script>
-    <link rel="stylesheet" href="bookclub.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Club Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
-
-<body id="body">
-
-    <div id= "shield">
-        
-    </div>
-    <div id="buttonprotector">
-
-    </div>
-    <div id="all">
-        <div id="header">
-
-            <div id="menuButton">
-                <div id="box">
-                    <img src="menu.png" alt="" id="menuImg">
-
-
-                </div>
-            </div>
-            <div id=headerText>
-                <h1 id="headerH1">RHS Book Club</h1>
-            </div>
+<body>
+    <!-- navigation -->
+    <nav class="navbar">
+        <div class="navbar__container">
+          <a href="#home" id="navbar__logo">Reservoir Readers</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="#home" class="navbar__links" id="home-page">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#about" class="navbar__links" id="CurrentBook">Current Book</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#archive" class="navbar__links" id="Archive-page">Archive</a>
+            </li>
+            <li class="navbar__btn">
+              <a href="#signup" class="button" id="vote">Sign Up</a>
+            </li>
+          </ul>
         </div>
-
-
-
-        <div id="mainPage">
-            <div id="menu">
-                <div id="optionOne" class="links">
-                    <h2>
-                        <a href="Contact.html">Contact Us</a>
-                    </h2>
-                </div>
-                <div id="optionTwo" class="links">
-                    <h2>
-                        <a href="Calendar.html">Calendar</a>
-                    </h2>
-                </div>
-            </div>
-            <div id="description">
-                <h2 class="maintext">
-                    Mission Statement
-                </h2>
-                <h3 class="maintext">
-                    We aim to discuss books and buddy read to keep eachother on track in a stress free and accepting
-                    environment. We also help with school reading!
-                </h3>
-                <br>
-                <hr>
-                <br>
-                <h2 class="maintext">
-                    What we're doing now
-                </h2>
-                <h3 class="maintext">
-                    Welcome to the RHS Book Club's Website! This is the first year of the Reservoir Book Club and
-                    We'd love for you to join! We're reading They Both Die at the End by Adam Silvera for the month of October! Let us know you're interested below to get information. We meet on Tuesdays after school.
-                </h3>
-
-
-                <div id="form">
-                    <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSef1DZ7r4k8hBF_1Q-F8Dt27JV-NQc44rq1WMBMqeCQBaOsNg/viewform?embedded=true"
-                        width="640" height="850px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                </div>
-
-
-            </div>
+      </nav>
+      <!-- hero -->
+      <div class="hero" id="home">
+        <div class="hero__container">
+          <h1 class="hero__heading"><span>Reservoir Readers</span></h1>
+          <p class="hero__description">Meets Every Tuesday 2:15-3:15</p>
+          
         </div>
-        <div id="footer">
-            <h5>
-                Created By Tyler Lehrfeld
-            </h5>
-            <p>
-                Class of 2022
-            </p>
-
-
+      </div>
+      <!-- about -->
+      <div class="main" id="about">
+        <div class="main__container">
+          <div class="main__img--container">
+            <div class="main__img--card">
+              <img src = "https://images-na.ssl-images-amazon.com/images/I/41rgl-8wDsL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg" alt="insert photo">
+            </div>
+          </div>
+          <div class="main__content">
+            <h1>Current Book:</h1>
+            <h2>Dunes</h2>
+            <button class="main__btn"><a href="https://www.amazon.com/They-Both-Die-at-End/dp/0062457802/ref=sr_1_1?dchild=1&keywords=they+both+die+at+the+end&qid=1633131472&sr=8-1">Buy</a></button>
+          </div>
         </div>
+      </div>
+<!-- archive -->
+<div class="archive" id="archive">
+  <h1>Our Picks</h1>
+  <div class="archive__wrapper">
+    <div class="archive__card">
+      <h2>The Ten Thousand Doors of January</h2>
+      <p></p>
+      <div class="archive__btn"><button></button></div>
     </div>
+    <div class="archive__card">
+      <h2>Dunes</h2>
+      <p></p>
+      <div class="archive__btn"><button></button></div>
     </div>
+    <div class="archive__card">
+      <h2>Brave New World</h2>
+      <p></p>
+      <div class="archive__btn"><button></button></div>
+    </div>
+    <div class="archive__card">
+      <h2>Small Gods</h2>
+      <p></p>
+      <div class="archive__btn"><button></button></div>
+    </div>
+   <!-- <button class="main__btn"><a href="#">View Full Archive</a></button> -->
+  </div>
+</div>
+
+
+
+<!-- Sign Up -->
+
+<div class="hero" id="signUp">
+  <div class="hero__container">
+    <p class="hero__description">Wanna Join?</p>
+    <button class="main__btn"><a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSef1DZ7r4k8hBF_1Q-F8Dt27JV-NQc44rq1WMBMqeCQBaOsNg/formResponse?embedded=true">Sign Up!</a></button>
+  </div>
+</div>
+
+<!-- footer -->
+<div class="footer__container">
+  <div class="footer__links">
+    <section class="social__media">
+      <div class="social__media--wrap">
+        <div class="footer__logo">
+          <a href="/" id="footer__logo">Reservoir Readers Site</a>
+          <p class = "website__rights">Created by Eric Ma and Tyler Lehrfeld</p>
+        </div>
+      
+        <div class="social__icons">
+          <a href="/" class="social__icon--link" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="/" class="social__icon--link" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="/" class="social__icon--link" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+      <script src ="app.js"></script>
+      
 </body>
 
 </html>
